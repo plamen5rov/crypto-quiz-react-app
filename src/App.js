@@ -11,16 +11,9 @@ import Login from "./components/pages/Login/Login";
 import { Route, Switch } from "react-router-dom";
 
 function App() {
-  const myStyle = {
-    position: "sticky",
-    top: "0px",
-    left: "0px",
-    backgroundColor: 'white',
-    color: "red"
-  };
   return (
     <div className="App">
-      <Header style={myStyle} />
+      <Header />
 
       <Switch>
         <Route path="/" exact component={Home} />
