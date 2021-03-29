@@ -2,8 +2,6 @@
 .header-menu {
   box-sizing: border-box;
   width: 100%;
-  position: fixed;
-  top: 0;
   margin: 0, auto;
   display: flex;
   align-items: center;

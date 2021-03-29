@@ -1,4 +1,3 @@
-
 import "./App.css";
 import Header from "./components/shared/Header/Header";
 import Footer from "./components/shared/Footer/Footer";
@@ -12,9 +11,16 @@ import Login from "./components/pages/Login/Login";
 import { Route, Switch } from "react-router-dom";
 
 function App() {
+  const myStyle = {
+    position: "sticky",
+    top: "0px",
+    left: "0px",
+    backgroundColor: 'white',
+    color: "red"
+  };
   return (
     <div className="App">
-      <Header />
+      <Header style={myStyle} />
 
       <Switch>
         <Route path="/" exact component={Home} />
