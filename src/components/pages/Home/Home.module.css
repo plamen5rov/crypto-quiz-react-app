@@ -1,0 +1,36 @@
+.home-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 80%;
+  margin: 40px, auto;
+  font-family: "Play";
+}
+
+.left-box {
+  width: 60%;
+  display: inline-block;
+  text-align: center;
+}
+
+.right-box {
+  display: inline-block;
+  width: 40%;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  height: auto;
+  width: auto;
+  padding: 15px, 25px;
+  border-radius: 33px;
+  background: linear-gradient(180deg, #f3a611 14.06%, #fff0ae 100%);
+  border: 2px solid #f3a611;
+}

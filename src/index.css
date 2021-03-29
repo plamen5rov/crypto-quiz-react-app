@@ -7,4 +7,5 @@ body {
   font-family: sans-serif, "Play";
   background-color: black;
   color: white;
+  position: relative;
 }
