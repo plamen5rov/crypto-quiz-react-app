@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: sans-serif, 'Orbitron';
+  font-family: sans-serif, "Play";
   background-color: black;
   color: white;
-  
 }
-
