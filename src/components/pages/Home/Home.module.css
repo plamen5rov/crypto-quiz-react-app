@@ -1,12 +1,10 @@
-article {
+/* div {
   display: flex;
   flex-direction: column;
-  flex-basis: 40%;
-  
 }
-
-.home-wrapper {
+.home-wrapper div {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -17,6 +15,12 @@ article {
   background-color: white;
 }
 
+article {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+  
+}
 .left-box {
   width: 60%;
   flex: 1;
@@ -50,4 +54,4 @@ button:hover {
   cursor: pointer;
   background: #f3a611;
   
-}
+} */
