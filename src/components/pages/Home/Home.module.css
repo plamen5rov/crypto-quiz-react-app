@@ -1,5 +1,5 @@
 
-.home-wrapper div {
+.home-wrapper  {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -10,6 +10,7 @@
   margin: 40px, auto;
   font-family: "Play";
   background-color: white;
+  padding: 50px;
 } 
 
 
@@ -20,16 +21,13 @@ article {
   flex-basis: 40%;
   
 }
-.left-box {
-  width: 60%;
-  flex: 1;
-  
-  text-align: center;
+.left-box h1 {
+  color: #f3a611;
+  margin:  50px;
 }
 
 .right-box {
-  flex: 2;
-  width: 40%;
+  
 }
 
 img {
