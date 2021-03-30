@@ -1,7 +1,4 @@
-/* div {
-  display: flex;
-  flex-direction: column;
-}
+
 .home-wrapper div {
   display: flex;
   flex-direction: row;
@@ -13,7 +10,9 @@
   margin: 40px, auto;
   font-family: "Play";
   background-color: white;
-}
+} 
+
+
 
 article {
   display: flex;
@@ -35,7 +34,7 @@ article {
 
 img {
   display: inline-block;
-  max-width: 40%;
+  max-width: 90%;
   height: auto;
 }
 
@@ -54,4 +53,4 @@ button:hover {
   cursor: pointer;
   background: #f3a611;
   
-} */
+} 
