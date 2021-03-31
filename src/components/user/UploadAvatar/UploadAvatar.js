@@ -1,6 +1,7 @@
 import React, { useState } from "react"; // eslint-disable-next-line
-import ProgressBar from "../ProgressBar/ProgressBar";
 import style from "./UploadAvatar.module.css";
+import ProgressBar from "../ProgressBar/ProgressBar";
+import ImageGrid from "../ImageGrid";
 
 function UploadAvatar() {
   const [file, setFile] = useState(null);
@@ -34,6 +35,7 @@ function UploadAvatar() {
         </div>
 
       </form>
+      <ImageGrid />
     </section>
   );
 }
