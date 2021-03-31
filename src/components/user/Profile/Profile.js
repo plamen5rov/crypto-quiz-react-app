@@ -1,7 +1,7 @@
 import React from 'react';
-import UploadAvatar from './UploadAvatar';
+import UploadAvatar from '../UploadAvatar/UploadAvatar';
 
-function UserProfile() {
+function Profile() {
     return (
         <div>
             <h1>User Profile Page</h1>
@@ -11,4 +11,4 @@ function UserProfile() {
     )
 }
 
-export default UserProfile
+export default Profile
