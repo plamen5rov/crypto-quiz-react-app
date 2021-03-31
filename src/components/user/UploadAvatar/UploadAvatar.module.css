@@ -1,0 +1,13 @@
+.upload-avatar {
+    display: flex;
+    border: chartreuse 2px solid;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    border: rgb(248, 163, 4) 2px solid;
+    border-radius: 12px;
+    margin-top: 300px;
+    padding: 50px;
+}
