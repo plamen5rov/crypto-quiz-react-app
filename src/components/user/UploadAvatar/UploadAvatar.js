@@ -1,4 +1,5 @@
 import React, { useState } from "react"; // eslint-disable-next-line
+import ProgressBar from "../ProgressBar/ProgressBar";
 import style from "./UploadAvatar.module.css";
 
 function UploadAvatar() {
@@ -28,6 +29,8 @@ function UploadAvatar() {
         <div className="output">
             {error && <div className="error">{ error }</div>}
             {file && <div>{ file.name }</div>}
+            {file && <ProgressBar file={file} setFile={setFile} />}
+
         </div>
 
       </form>

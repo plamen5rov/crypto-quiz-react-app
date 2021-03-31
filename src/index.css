@@ -14,3 +14,10 @@ div {
   display: flex;
   
 }
+
+/* progress bar styles */
+.progress-bar{
+  height: 5px;
+  background: royalblue;
+  margin-top: 20px;
+}
