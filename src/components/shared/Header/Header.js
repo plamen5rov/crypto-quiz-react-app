@@ -20,6 +20,9 @@ export default function Header() {
           <NavLink to="/hall-of-fame">Hall of fame</NavLink>
         </li>
         <li>
+          <NavLink to="/profile">Profile</NavLink>
+        </li>
+        <li>
           <NavLink to="/register">Register</NavLink>
         </li>
         <li>

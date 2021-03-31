@@ -24,7 +24,7 @@ function App() {
         <Route path="/register" component={Register} />
         <Route path="/login" component={Login} />
         <Route path="/profile" component={Profile} />
-        <Route render={() => <h1>Page not found!</h1>} />
+        <Route render={() => <h1 style={{padding: 50}}>Page not found!</h1>} />
       </Switch>
 
       <Footer />
