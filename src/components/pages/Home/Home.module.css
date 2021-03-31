@@ -17,6 +17,8 @@ article h1 {
   margin-top: 40px;
   font-size: 3rem;
   margin-bottom: 0;
+  letter-spacing: 8px;
+  word-spacing: 8px;
 }
 
 article h2 {
