@@ -8,7 +8,7 @@ export class Home extends Component {
       <div className="home-wrapper">
         <article className="left-box">
           <h1>CRYPTO QUIZ</h1>
-          <h2>TEST YOUR KNOLEDGE NOW</h2>
+          <h2>TEST YOUR KNOWLEDGE TODAY</h2>
           <h3>
             <p>10 CATEGORIES WITH 10 QUESTIONS EACH</p>
             <p>REGISTER NOW AND START PLAYING</p>
@@ -19,6 +19,7 @@ export class Home extends Component {
         <article className="right-box">
           <img src="bitcoin-coin.png" alt="bitcoin" className="home-image" />
         </article> 
+        
       </div>
     );
   }

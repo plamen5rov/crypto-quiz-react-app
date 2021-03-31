@@ -1,44 +1,44 @@
-
-.home-wrapper  {
+.home-wrapper div {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
+  margin: 50px auto;
   width: 80%;
-  margin: 40px, auto;
-  font-family: "Play";
-  background-color: white;
-  padding: 50px;
-} 
-
-
+}
 
 article {
   display: flex;
   flex-direction: column;
-  flex-basis: 40%;
-  
+  flex-basis: 90%;
+  margin: 40px 5px;
+  align-items: center;
+  justify-content: center;
 }
-.left-box h1 {
-  color: #f3a611;
-  margin:  50px;
+article h1 {
+  color: #fa8c16;
+  margin-top: 40px;
+  font-size: 3rem;
+  margin-bottom: 0;
 }
 
-.right-box {
-  
+article h2 {
+  color: #ffd591;
+  margin-top: 10px;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+article p {
+  margin-top: 10px;
+  text-align: center;
 }
 
 img {
-  display: inline-block;
-  max-width: 90%;
-  height: auto;
+  max-width: 70%;
+  margin-top: 80px;
 }
 
 button {
   height: auto;
-  width: 200px;
+  width: 300px;
   padding: 15px 5px;
   font-size: large;
   font-weight: bold;
@@ -50,5 +50,4 @@ button {
 button:hover {
   cursor: pointer;
   background: #f3a611;
-  
-} 
+}
