@@ -12,12 +12,22 @@ body {
 
 div {
   display: flex;
-  
 }
 
 /* progress bar styles */
-.progress-bar{
+.progress-bar {
   height: 5px;
   background: royalblue;
   margin-top: 20px;
 }
+
+/* TEMP CSS */
+
+/* image grid styles */
+.img-grid {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+
