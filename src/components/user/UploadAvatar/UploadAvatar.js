@@ -22,11 +22,9 @@ function UploadAvatar() {
     <section className="upload-avatar">
       <form>
         <label htmlFor="avatar">Upload picture:</label>
-        <br />
-        <br />
+        
         <input type="file" name="avatar" onChange={changeHandler} />
-        <br />
-        <br />
+        
         <div className="output">
             {error && <div className="error">{ error }</div>}
             {file && <div>{ file.name }</div>}

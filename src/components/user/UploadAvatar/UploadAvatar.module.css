@@ -1,6 +1,5 @@
-.upload-avatar {
-    display: flex;
-    border: chartreuse 2px solid;
+.upload-avatar label {
+    display: block;
 }
 
 section {
@@ -10,4 +9,6 @@ section {
     border-radius: 12px;
     margin-top: 300px;
     padding: 50px;
+    align-items: center;
+    justify-content: space-between;
 }
