@@ -1,5 +1,5 @@
-import React, { useState } from "react"; // eslint-disable-next-line
-import style from "./UploadAvatar.module.css";
+import React, { useState } from "react"; 
+import styles from "./UploadAvatar.module.css";
 import ProgressBar from "../ProgressBar/ProgressBar";
 import ImageGrid from "../ImageGrid";
 
@@ -19,13 +19,13 @@ function UploadAvatar() {
   };
 
   return (
-    <section className="upload-avatar">
+    <section className={styles.uploadAvatar}>
       <form>
         <label htmlFor="avatar">Upload picture:</label>
         
-        <input type="file" name="avatar" onChange={changeHandler} />
+        <input type="file" name="avatar" id="avatar" onChange={changeHandler} />
         
-        <div className="output">
+        <div className={styles.output}>
             {error && <div className="error">{ error }</div>}
             {file && <div>{ file.name }</div>}
             {file && <ProgressBar file={file} setFile={setFile} />}
