@@ -1,12 +1,12 @@
-import React, { Component } from "react"; // eslint-disable-next-line
-import style from "./Home.module.css";
+import React, { Component } from "react"; 
+import styles from "./Home.module.css";
 import { Link } from 'react-router-dom';
 
 export class Home extends Component {
   render() {
     return (
-      <div className="home-wrapper">
-        <article className="left-box">
+      <div className={styles.homeWrapper}>
+        <article className={styles.leftBox}>
           <h1>CRYPTO QUIZ</h1>
           <h2>TEST YOUR KNOWLEDGE TODAY</h2>
           <h3>
@@ -14,10 +14,10 @@ export class Home extends Component {
             <p>REGISTER NOW AND START PLAYING</p>
             <p>TO PUT YOUR NAME IN THE HALL OF FAME!</p>
           </h3>
-          <Link to="/register"><button className="home-btn-register">REGISTER NOW</button></Link>
+          <Link to="/register"><button className={styles.homeBtnRegister}>REGISTER NOW</button></Link>
         </article>
-        <article className="right-box">
-          <img src="bitcoin-coin.png" alt="bitcoin" className="home-image" />
+        <article className={styles.rightBox}>
+          <img src="bitcoin-coin.png" alt="bitcoin" className={styles.imgBitcoin} />
         </article> 
         
       </div>

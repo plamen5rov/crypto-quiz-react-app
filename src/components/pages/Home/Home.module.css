@@ -1,4 +1,4 @@
-.home-wrapper div {
+.homeWrapper div {
   display: flex;
   margin: 50px auto;
   width: 80%;
@@ -33,12 +33,12 @@ article p {
   text-align: center;
 }
 
-img {
+.imgBitcoin {
   max-width: 70%;
   margin-top: 80px;
 }
 
-button {
+.homeBtnRegister {
   height: auto;
   width: 300px;
   padding: 15px 5px;
@@ -49,7 +49,7 @@ button {
   border: 2px solid #f3a611;
 }
 
-button:hover {
+.homeBtnRegister:hover {
   cursor: pointer;
   background: #f3a611;
 }
