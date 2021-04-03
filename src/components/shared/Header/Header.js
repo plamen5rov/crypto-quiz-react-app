@@ -1,10 +1,10 @@
-import React from "react"; // eslint-disable-next-line
-import style from "./Header.module.css";
+import React from "react";
+import styles from "./Header.module.css";
 import { NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
-    <nav className="style.header-menu">
+    <nav className={styles.headerMenu}>
       <ul>
         <li>
           <NavLink to="/">Home</NavLink>

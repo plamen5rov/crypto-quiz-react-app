@@ -1,46 +1,55 @@
-.homeWrapper div {
+.homeWrapper {
   display: flex;
-  margin: 50px auto;
-  width: 80%;
+  margin: 0px auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 1140px;
+  height: 100vh;
 }
 
-article {
+.leftBox {
   display: flex;
   flex-direction: column;
   flex-basis: 90%;
-  margin: 40px 5px;
   align-items: center;
   justify-content: center;
 }
-article h1 {
+.leftBox h1 {
   color: #fa8c16;
   margin-top: 40px;
-  font-size: 3rem;
-  margin-bottom: 0;
-  letter-spacing: 8px;
-  word-spacing: 8px;
+  font-size: 3.9rem;
+  margin-bottom: 5px;
+  letter-spacing: 7px;
 }
 
-article h2 {
+.leftBox h2 {
   color: #ffd591;
   margin-top: 10px;
   font-size: 2rem;
   margin-bottom: 0;
 }
 
-article p {
-  margin-top: 10px;
+.leftBox p {
+  margin: 7px auto;
   text-align: center;
 }
 
-.imgBitcoin {
-  max-width: 70%;
-  margin-top: 80px;
+.rightBox {
+  display: flex;
+  flex-basis: 90%;
+  margin: 40px 5px;
+  align-items: center;
+  justify-content: center;
+}
+.rightBox img {
+  max-width: 90%;
+  margin-top: 40px;
 }
 
 .homeBtnRegister {
   height: auto;
-  width: 300px;
+  width: 200px;
   padding: 15px 5px;
   font-size: large;
   font-weight: bold;
