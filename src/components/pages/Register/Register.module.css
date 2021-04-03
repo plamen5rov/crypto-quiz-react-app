@@ -1,5 +1,6 @@
 .registerForm {
   display: flex;
+  max-width: 400 px;
   flex-direction: column;
   border: rgb(248, 163, 4) 2px solid;
   border-radius: 12px;
@@ -15,27 +16,46 @@
   display: block;
   margin: 10px auto;
   border: none;
+  width: 300px;
 }
 
 .registerForm label {
   margin-right: 10px;
   font-size: larger;
+  
 }
 
 .registerForm input {
   margin-right: 10px;
   border: rgb(248, 163, 4) 2px solid;
   border-radius: 2px;
+  
 }
 
 .registerForm button {
   height: auto;
-  width: 200px;
-  padding: 15px 5px;
-  font-size: large;
+  width: 260px;
+  padding: 10px 5px;
+  font-size: 30px;
   font-weight: bold;
   border-radius: 33px;
   background: linear-gradient(180deg, #f3a611 14.06%, #fff0ae 100%);
   border: 2px solid #f3a611;
-  cursor: pointer;
+  font-family: "Play";
+  margin-top: 15px;
+}
+
+.registerForm button:hover {
+    cursor: pointer;
+    background: #f3a611;
+  }
+
+.login {
+    text-align: center;
+    margin-top: 22px;
+    font-size: small;
+}
+
+.login a:visited {
+    color: white;
 }
