@@ -13,7 +13,8 @@ import { AuthProvider } from "context/AuthContext";
 
 function App() {
   return (
-    <AuthProvider>
+    
+<AuthProvider>
       <div className="App">
         <Header />
 
@@ -33,6 +34,8 @@ function App() {
         <Footer />
       </div>
     </AuthProvider>
+    
+    
   );
 }
 

@@ -56,6 +56,6 @@
     font-size: small;
 }
 
-.login a:visited {
-    color: white;
+.login a {
+    color:  #f3a611;
 }

@@ -1,9 +1,67 @@
-import React from 'react'
+import React, { useRef, useState } from "react";
+import styles from "./Login.module.css";
+import { Link } from "react-router-dom";
+import { useAuth } from "../../../context/AuthContext"
 
-export default function Login() {
-    return (
-        <div>
-            <h1 style={{padding: 50}}>Login</h1>
-        </div>
-    )
+function Login() {
+
+    const emailRef = useRef();
+    const passwordRef = useRef();
+    const { signup, currentUser } = useAuth();
+    const [error, setError]= useState('');
+    const [loading, setLoading]= useState(false);
+
+
+
+    async function handleSubmit(e){
+        e.preventDefault();
+
+        //if (emailRef.current.value!==user) {return  setError('Email already exists')}
+        try {
+            setError('');
+            setLoading(true);
+            signup(emailRef.current.value, passwordRef.current.value)
+        } catch {
+            setError('Failed to create account');
+            console.log(error);
+        }
+        setLoading(false);
+
+    }
+  return (
+    <div className={styles.loginForm}>
+      <h2>LOGIN:</h2>
+      {currentUser && currentUser.email}
+      <form onSubmit={handleSubmit}>
+        <fieldset>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="Your email here"
+            ref={emailRef}
+          />
+        </fieldset>
+        <fieldset>
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+            placeholder="Your password here"
+            ref={passwordRef}
+          />
+        </fieldset>
+        <button type='submit' disabled={loading}>LOGIN</button>
+      </form>
+      <section className={styles.register}>
+Don't have an account yet? <Link to="/register">Register here</Link>
+      </section>
+    </div>
+  );
 }
+
+export default Login;
