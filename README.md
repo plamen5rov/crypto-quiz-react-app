@@ -1,19 +1,7 @@
 # CRYPTO QUIZ React App
 ![App's Front Page](https://firebasestorage.googleapis.com/v0/b/crypto-quiz-react-app.appspot.com/o/frontpage.png?alt=media&token=4fe29728-a12d-41a2-a2d6-2954feff13f0)
 # Project's Structure
-crypto-quiz-react-app/
-├─ node_modules/
-├─ public/
-├─ src/
-│  ├─ components/
-│  │  ├─ pages/   static pages components (available to non-registered visitors)
-│  │  ├─ shared/  Header and Footer components
-│  │  ├─ user/    all components for registered users only
-│  │  ├─ utils/   context and config files
-│  ├─ hooks/      
-│  ├─ index.css
-│  ├─ jsconfig.json
-
+![file structure](https://firebasestorage.googleapis.com/v0/b/crypto-quiz-react-app.appspot.com/o/file-structure.png?alt=media&token=2e2ab2f6-31b9-4ad5-9a38-adac3c06c6f3)
 
 # Getting Started with Create React App
 
