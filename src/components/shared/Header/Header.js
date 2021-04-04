@@ -14,6 +14,7 @@ export default function Header() {
       setError("");
     } catch {
       setError("Logout failed!");
+      console.log(error);
     }
   }
   return (

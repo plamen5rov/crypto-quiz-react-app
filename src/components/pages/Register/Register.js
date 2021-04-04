@@ -19,12 +19,13 @@ function Register() {
       setError("");
       setLoading(true);
       await signup(emailRef.current.value, passwordRef.current.value);
-      history.push("/login");
+      
     } catch {
       setError("Failed to create account");
       console.log(error);
     }
     setLoading(false);
+    history.push("/login");
   }
   return (
     <div className={styles.registerForm}>

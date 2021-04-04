@@ -19,12 +19,13 @@ function Login() {
       setError("");
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
-      history.push("/profile");
+      
     } catch {
       setError("Failed to login to account");
       console.log(error);
     }
     setLoading(false);
+    history.push("/profile");
   }
   return (
     <div className={styles.loginForm}>
