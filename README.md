@@ -1,4 +1,5 @@
 # CRYPTO QUIZ React App
+![App's Front Page](https://firebasestorage.googleapis.com/v0/b/crypto-quiz-react-app.appspot.com/o/frontpage.png?alt=media&token=4fe29728-a12d-41a2-a2d6-2954feff13f0)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
