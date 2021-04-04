@@ -8,27 +8,31 @@ import HallOfFame from "./components/pages/HallOfFame/HallOfFame";
 import Register from "./components/pages/Register/Register";
 import Login from "./components/pages/Login/Login";
 import Profile from "./components/user/Profile/Profile";
-
 import { Route, Switch } from "react-router-dom";
+import { AuthProvider } from "context/AuthContext";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
+    <AuthProvider>
+      <div className="App">
+        <Header />
 
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/categories" component={Categories} />
-        <Route path="/hall-of-fame" component={HallOfFame} />
-        <Route path="/register" component={Register} />
-        <Route path="/login" component={Login} />
-        <Route path="/profile" component={Profile} />
-        <Route render={() => <h1 style={{padding: 50}}>Page not found!</h1>} />
-      </Switch>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/categories" component={Categories} />
+          <Route path="/hall-of-fame" component={HallOfFame} />
+          <Route path="/register" component={Register} />
+          <Route path="/login" component={Login} />
+          <Route path="/profile" component={Profile} />
+          <Route
+            render={() => <h1 style={{ padding: 50 }}>Page not found!</h1>}
+          />
+        </Switch>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </AuthProvider>
   );
 }
 

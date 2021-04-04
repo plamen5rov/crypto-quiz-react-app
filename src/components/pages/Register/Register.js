@@ -1,15 +1,38 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./Register.module.css";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../../context/AuthContext"
 
 function Register() {
 
     const emailRef = useRef();
     const passwordRef = useRef();
+    const { signup, currentUser } = useAuth();
+    const [error, setError]= useState('');
+    const [loading, setLoading]= useState(false);
+
+
+
+    async function handleSubmit(e){
+        e.preventDefault();
+
+        //if (emailRef.current.value!==user) {return  setError('Email already exists')}
+        try {
+            setError('');
+            setLoading(true);
+            signup(emailRef.current.value, passwordRef.current.value)
+        } catch {
+            setError('Failed to create account');
+            console.log(error);
+        }
+        setLoading(false);
+
+    }
   return (
     <div className={styles.registerForm}>
       <h2>REGISTRATION:</h2>
-      <form>
+      {currentUser && currentUser.email}
+      <form onSubmit={handleSubmit}>
         <fieldset>
           <label htmlFor="email">Email:</label>
           <input
@@ -32,7 +55,7 @@ function Register() {
             ref={passwordRef}
           />
         </fieldset>
-        <button type='submit'>REGISTER</button>
+        <button type='submit' disabled={loading}>REGISTER</button>
       </form>
       <section className={styles.login}>
 Already have an account? <Link to="/login">Log in here</Link>

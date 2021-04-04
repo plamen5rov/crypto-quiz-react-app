@@ -8,11 +8,10 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
+  min-width: 1200px;
 }
 
-div {
-  display: flex;
-}
+
 
 /* progress bar styles */
 .progress-bar {
