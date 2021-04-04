@@ -1,36 +1,35 @@
 import React, { useRef, useState } from "react";
 import styles from "./Login.module.css";
-import { Link } from "react-router-dom";
-import { useAuth } from "../../../context/AuthContext"
+import { Link, useHistory } from "react-router-dom";
+import { useAuth } from "../../../context/AuthContext";
 
 function Login() {
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const { login, currentUser } = useAuth();
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const history = useHistory();
 
-    const emailRef = useRef();
-    const passwordRef = useRef();
-    const { signup, currentUser } = useAuth();
-    const [error, setError]= useState('');
-    const [loading, setLoading]= useState(false);
+  async function handleSubmit(e) {
+    e.preventDefault();
 
-
-
-    async function handleSubmit(e){
-        e.preventDefault();
-
-        //if (emailRef.current.value!==user) {return  setError('Email already exists')}
-        try {
-            setError('');
-            setLoading(true);
-            signup(emailRef.current.value, passwordRef.current.value)
-        } catch {
-            setError('Failed to create account');
-            console.log(error);
-        }
-        setLoading(false);
-
+    //if (emailRef.current.value!==user) {return  setError('Email already exists')}
+    try {
+      setError("");
+      setLoading(true);
+      await login(emailRef.current.value, passwordRef.current.value);
+      history.push("/profile");
+    } catch {
+      setError("Failed to login to account");
+      console.log(error);
     }
+    setLoading(false);
+  }
   return (
     <div className={styles.loginForm}>
       <h2>LOGIN:</h2>
+      <h4>Logged as:</h4>
       {currentUser && currentUser.email}
       <form onSubmit={handleSubmit}>
         <fieldset>
@@ -55,10 +54,12 @@ function Login() {
             ref={passwordRef}
           />
         </fieldset>
-        <button type='submit' disabled={loading}>LOGIN</button>
+        <button type="submit" disabled={loading}>
+          LOGIN
+        </button>
       </form>
       <section className={styles.register}>
-Don't have an account yet? <Link to="/register">Register here</Link>
+        Don't have an account yet? <Link to="/register">Register here</Link>
       </section>
     </div>
   );

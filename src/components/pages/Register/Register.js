@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import styles from "./Register.module.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
 
 function Register() {
@@ -9,6 +9,7 @@ function Register() {
   const { signup, currentUser } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const history = useHistory();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -17,7 +18,8 @@ function Register() {
     try {
       setError("");
       setLoading(true);
-      signup(emailRef.current.value, passwordRef.current.value);
+      await signup(emailRef.current.value, passwordRef.current.value);
+      history.push("/login");
     } catch {
       setError("Failed to create account");
       console.log(error);
