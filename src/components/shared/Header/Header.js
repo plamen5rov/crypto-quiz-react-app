@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Header.module.css";
 import { NavLink, useHistory } from "react-router-dom";
-import { auth } from "../../../firebase/config";
+import { auth } from "../../utils/firebaseConfig";
 
 export default function Header() {
   const [error, setError] = useState();
@@ -10,12 +10,14 @@ export default function Header() {
     setError("");
     try {
       await auth.signOut();
-      history.push("/");
+      
       setError("");
     } catch {
       setError("Logout failed!");
       console.log(error);
     }
+    console.log("LOGOUT SUCCESSFULL");
+    history.push("/");
   }
   return (
     <nav className={styles.headerMenu}>

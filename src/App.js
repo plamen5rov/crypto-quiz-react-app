@@ -9,7 +9,8 @@ import Register from "./components/pages/Register/Register";
 import Login from "./components/pages/Login/Login";
 import Profile from "./components/user/Profile/Profile";
 import { Route, Switch } from "react-router-dom";
-import { AuthProvider } from "context/AuthContext";
+import { AuthProvider } from "components/utils/AuthContext";
+import PrivateRoute from "./components/utils/PrivateRoute";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           <Route path="/hall-of-fame" component={HallOfFame} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
-          <Route path="/profile" component={Profile} />
+          <PrivateRoute path="/profile" component={Profile} />
           <Route
             render={() => <h1 style={{ padding: 50 }}>Page not found!</h1>}
           />

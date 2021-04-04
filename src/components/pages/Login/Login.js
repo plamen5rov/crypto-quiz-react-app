@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import styles from "./Login.module.css";
 import { Link, useHistory } from "react-router-dom";
-import { useAuth } from "../../../context/AuthContext";
+import { useAuth } from "../../utils/AuthContext";
 
 function Login() {
   const emailRef = useRef();

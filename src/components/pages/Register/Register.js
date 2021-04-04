@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import styles from "./Register.module.css";
 import { Link, useHistory } from "react-router-dom";
-import { useAuth } from "../../../context/AuthContext";
+import { useAuth } from "../../utils/AuthContext";
 
 function Register() {
   const emailRef = useRef();
