@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Header.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
+import { auth } from "../../../firebase/config";
 
 export default function Header() {
+  const [error, setError] = useState();
+  const history = useHistory();
+  async function handleLogout() {
+    setError("");
+    try {
+      await auth.signOut();
+      history.push("/");
+      setError("");
+    } catch {
+      setError("Logout failed!");
+    }
+  }
   return (
     <nav className={styles.headerMenu}>
       <ul>
@@ -27,6 +40,9 @@ export default function Header() {
         </li>
         <li>
           <NavLink to="/login">Login</NavLink>
+        </li>
+        <li onClick={handleLogout}>
+          <NavLink to="#">Logout</NavLink>
         </li>
       </ul>
     </nav>
