@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import styles from "./Header.module.css";
 import { NavLink, useHistory } from "react-router-dom";
 import { auth } from "../../utils/firebaseConfig";
+import { useAuth } from "../../utils/AuthContext";
 
 export default function Header() {
   const [error, setError] = useState();
   const history = useHistory();
+  const { currentUser } = useAuth();
   async function handleLogout() {
     setError("");
     try {
       await auth.signOut();
-      
+
       setError("");
     } catch {
       setError("Logout failed!");
@@ -38,15 +40,22 @@ export default function Header() {
         <li>
           <NavLink to="/profile">Profile</NavLink>
         </li>
-        <li>
-          <NavLink to="/register">Register</NavLink>
-        </li>
-        <li>
-          <NavLink to="/login">Login</NavLink>
-        </li>
-        <li onClick={handleLogout}>
-          <NavLink to="#">Logout</NavLink>
-        </li>
+        {!currentUser && (
+          <li>
+            <NavLink to="/register">Register</NavLink>
+          </li>
+        )}
+        {!currentUser && (
+          <li>
+            <NavLink to="/login">Login</NavLink>
+          </li>
+        )}
+
+        {currentUser && (
+          <li onClick={handleLogout}>
+            <NavLink to="#">Logout</NavLink>
+          </li>
+        )}
       </ul>
     </nav>
   );
