@@ -1,3 +1,17 @@
 .categoryBox {
-    color: white;
+    box-sizing: border-box;
+    position:relative;
+    top: 50px;
+    left: 260px;
+    color: #f3a611;
+    padding: 50px;
+    text-align: left;
+
+}
+.categoryBox ul {
+    list-style-type: none;
+}
+
+.categoryBox li {
+    padding-top: 12px;
 }

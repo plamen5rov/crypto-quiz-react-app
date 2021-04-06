@@ -23,17 +23,17 @@ function Categories() {
 
   //const { docs } = useFirestore("categories");
   return (
-    <div>
-      <h1 style={{ padding: 50 }}>Categories</h1>
+    <div className={styles.categoryBox}>
+      <h1>Categories</h1>
 
-      <ol>
+      <ul >
         {category.map((category) => (
           <li key={category.id}>
             {category.id}
             {category.name}
           </li>
         ))}
-      </ol>
+      </ul>
     </div>
   );
 }
