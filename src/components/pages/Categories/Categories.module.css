@@ -1,17 +1,27 @@
 .categoryBox {
-    box-sizing: border-box;
-    position:relative;
-    top: 50px;
-    left: 260px;
-    color: #f3a611;
-    padding: 50px;
-    text-align: left;
-
+  display: flex;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
 }
 .categoryBox ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .categoryBox li {
-    padding-top: 12px;
+  padding-top: 9px;
+  font-size: 1.7rem;
+}
+
+.categoryBtn {
+  height: auto;
+  width: 100%;
+  padding: 15px 25px;
+  font-family: "Play";
+  font-size: 1.5rem;
+  font-weight:lighter;
+  text-transform: uppercase;
+  border-radius: 33px;
+  background: #f3a611;
+  border: 2px solid #f3a611;
 }

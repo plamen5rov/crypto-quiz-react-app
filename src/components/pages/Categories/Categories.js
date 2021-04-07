@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import firebase from "firebase/app";
-//import useFirestore from "hooks/useFirestore";
 import styles from "./Categories.module.css";
 //import { motion } from "framer-motion";
 
@@ -21,19 +20,15 @@ function Categories() {
     };
   }, []);
 
-  //const { docs } = useFirestore("categories");
+  const listItems = category.map((category) => (
+    <li key={category.name}>
+      <button className={styles.categoryBtn}>{category.name}</button>
+    </li>
+  ));
+
   return (
     <div className={styles.categoryBox}>
-      <h1>Categories</h1>
-
-      <ul >
-        {category.map((category) => (
-          <li key={category.id}>
-            {category.id}
-            {category.name}
-          </li>
-        ))}
-      </ul>
+      <ul>{listItems}</ul>
     </div>
   );
 }
