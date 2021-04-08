@@ -19,13 +19,26 @@ function Login() {
       setError("");
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
-      
     } catch {
       setError("Failed to login to account");
       console.log(error);
     }
     setLoading(false);
-    history.push("/profile");
+
+    // function checkAdmin() {
+    //   if (currentUser && (currentUser.email === "admin@quiz.com")) {
+    //     return true;
+    //   } else return false;
+    // }
+
+    // const admin = checkAdmin();
+    // console.log('Admin is: ',admin);
+    // console.log( 'Current user is: ', currentUser );
+
+    // if (admin) {
+    //   history.push("/admin");
+    // } else history.push("/profile");
+    history.push("/profile")
   }
   return (
     <div className={styles.loginForm}>
