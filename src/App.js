@@ -12,6 +12,7 @@ import { Route, Switch } from "react-router-dom";
 import { AuthProvider } from "components/utils/AuthContext";
 import PrivateRoute from "./components/utils/PrivateRoute";
 import Dashboard from "components/pages/Dashboard/Dashboard";
+import AdminRoute from "./components/utils/AdminRoute";
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
           <PrivateRoute path="/profile" component={Profile} />
-          <Route path="/admin" component={Dashboard} />
+          <AdminRoute path="/admin" component={Dashboard} />
           <Route
             render={() => <h1 style={{ padding: 50 }}>Page not found!</h1>}
           />

@@ -8,6 +8,16 @@ export default function Header() {
   const [error, setError] = useState();
   const history = useHistory();
   const { currentUser } = useAuth();
+  // function checkAdmin() {
+  //   if (currentUser) {
+  //     if (currentUser.email === "admin@quiz.com") {
+  //       return true;
+  //     }
+  //   }
+  //   return false;
+  // }
+  // const adminUser = checkAdmin();
+  // console.log(adminUser);
   async function handleLogout() {
     setError("");
     try {
@@ -56,7 +66,7 @@ export default function Header() {
             <NavLink to="#">Logout</NavLink>
           </li>
         )}
-        {currentUser && (currentUser.email==='admin@quiz.com') && (
+        {currentUser && (
           <li>
             <NavLink to="/admin">Admin</NavLink>
           </li>
