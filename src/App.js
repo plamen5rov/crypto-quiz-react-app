@@ -11,6 +11,7 @@ import Profile from "./components/user/Profile/Profile";
 import { Route, Switch } from "react-router-dom";
 import { AuthProvider } from "components/utils/AuthContext";
 import PrivateRoute from "./components/utils/PrivateRoute";
+import Dashboard from "components/pages/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route
             render={() => <h1 style={{ padding: 50 }}>Page not found!</h1>}
           />
+          <Route path="/admin" component={Dashboard} />
         </Switch>
 
         <Footer />

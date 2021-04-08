@@ -56,6 +56,11 @@ export default function Header() {
             <NavLink to="#">Logout</NavLink>
           </li>
         )}
+        {currentUser && (
+          <li>
+            <NavLink to="/admin">Admin</NavLink>
+          </li>
+        )}
       </ul>
     </nav>
   );
