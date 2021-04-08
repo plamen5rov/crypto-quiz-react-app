@@ -56,7 +56,7 @@ export default function Header() {
             <NavLink to="#">Logout</NavLink>
           </li>
         )}
-        {currentUser && (
+        {currentUser && (currentUser.email==='admin@quiz.com') && (
           <li>
             <NavLink to="/admin">Admin</NavLink>
           </li>

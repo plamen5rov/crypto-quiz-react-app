@@ -28,10 +28,11 @@ function App() {
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
           <PrivateRoute path="/profile" component={Profile} />
+          <Route path="/admin" component={Dashboard} />
           <Route
             render={() => <h1 style={{ padding: 50 }}>Page not found!</h1>}
           />
-          <Route path="/admin" component={Dashboard} />
+          
         </Switch>
 
         <Footer />
