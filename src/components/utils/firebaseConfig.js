@@ -13,12 +13,12 @@ const firebaseConfig = {
   appId: "1:584292717939:web:9b1e3366232bfe53536106",
 };
 // Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
+const fb = firebase.initializeApp(firebaseConfig);
 
 const projectStorage = firebase.storage();
 const projectFirestore = firebase.firestore();
 const timestamp = firebase.firestore.FieldValue.serverTimestamp;
-const auth = app.auth();
+const auth = fb.auth();
 
 export { projectStorage, projectFirestore, timestamp, auth };
-export default app;
+export default fb;
