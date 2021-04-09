@@ -1,0 +1,74 @@
+.dashboard-wrapper {
+  box-sizing: border-box;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-wrapper h1 {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.dashboardForm {
+  display: flex;
+  max-width: 400px;
+  flex-direction: column;
+  border: rgb(248, 163, 4) 2px solid;
+  border-radius: 12px;
+  margin: 130px;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.dashboardForm fieldset {
+  display: block;
+  margin: 10px auto;
+  border: none;
+  width: 300px;
+}
+
+.dashboardForm label {
+  margin-right: 10px;
+  font-size: larger;
+  
+}
+
+.dashboardForm input {
+  margin-right: 10px;
+  border: rgb(248, 163, 4) 2px solid;
+  border-radius: 2px;
+  
+}
+
+.dashboardForm button {
+  height: auto;
+  width: 260px;
+  padding: 10px 5px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 33px;
+  background: linear-gradient(180deg, #f3a611 14.06%, #fff0ae 100%);
+  border: 2px solid #f3a611;
+  font-family: "Play";
+  margin-top: 15px;
+}
+
+.dashboardForm button:hover {
+    cursor: pointer;
+    background: #f3a611;
+  }
+
+.login {
+    text-align: center;
+    margin-top: 22px;
+    font-size: small;
+}
+
+.login a {
+    color:  #f3a611;
+}

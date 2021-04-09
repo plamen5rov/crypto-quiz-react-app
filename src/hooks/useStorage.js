@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import {
   projectStorage,
-  projectFirestore,
+  db,
   timestamp,
 } from "../components/utils/firebaseConfig";
 
@@ -13,7 +13,7 @@ const useStorage = (file) => {
   useEffect(() => {
     // references
     const storageRef = projectStorage.ref(file.name);
-    const collectionRef = projectFirestore.collection("images");
+    const collectionRef = db.collection("images");
 
     storageRef.put(file).on(
       "state_changed",

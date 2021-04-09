@@ -1,7 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/storage";
 import "firebase/firestore";
-import "firebase/auth"
+import "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -13,12 +13,12 @@ const firebaseConfig = {
   appId: "1:584292717939:web:9b1e3366232bfe53536106",
 };
 // Initialize Firebase
-const fb = firebase.initializeApp(firebaseConfig);
-
+const app = firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore(app);
 const projectStorage = firebase.storage();
-const projectFirestore = firebase.firestore();
-const timestamp = firebase.firestore.FieldValue.serverTimestamp;
-const auth = fb.auth();
 
-export { projectStorage, projectFirestore, timestamp, auth };
-export default fb;
+const timestamp = firebase.firestore.FieldValue.serverTimestamp;
+const auth = app.auth();
+
+export { projectStorage, timestamp, auth, db };
+export default app;
