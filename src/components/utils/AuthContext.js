@@ -19,35 +19,31 @@ export function AuthProvider({ children }) {
     
   }
 
-  function createUserProfile(email) {
-    return db.collection('users')
-    .doc(email)
-    .set({username: email})
-    .then(() => {
+  async function createUserProfile(email) {
+    try {
+      await db.collection('users')
+        .doc(email)
+        .set({ username: email, score: 0 });
       console.log("User successfully created!");
-      
-    })
-    .catch((error) => {
+    } catch (error) {
       console.error("Error creating user: ", error);
-    });
+    }
   }
 
-  function updateUserProfile(email, username, avatarUrl) {
+  async function updateUserProfile(email, username, avatarUrl) {
 
     const data = {
       username,
       avatarUrl
     };
-    return db.collection('users')
-    .doc(email)
-    .set(data)
-    .then(() => {
+    try {
+      await db.collection('users')
+        .doc(email)
+        .set(data);
       console.log("User successfully updated!");
-      
-    })
-    .catch((error) => {
+    } catch (error) {
       console.error("Error creating user: ", error);
-    });
+    }
   }
 
    /* function logout() {

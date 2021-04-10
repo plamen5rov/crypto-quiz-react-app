@@ -4,8 +4,6 @@ import { useHistory } from "react-router-dom";
 import "./Dashboard.css";
 
 function Dashboard() {
-  console.log("Dashboard started");
-
   const collectionRef = useRef();
   const questionNumberRef = useRef();
   const questionRef = useRef();
@@ -15,15 +13,11 @@ function Dashboard() {
   const answerDRef = useRef();
   const rightAnswerRef = useRef();
 
-  //const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useHistory();
+
   async function handleDashboardSubmit(e) {
     e.preventDefault();
-
-    console.log(collectionRef.current.value);
-    console.log(questionNumberRef.current.value);
-    console.log(questionRef.current.value);
 
     const collection = collectionRef.current.value;
     const questionNumber = questionNumberRef.current.value;
@@ -86,7 +80,7 @@ function Dashboard() {
         <fieldset>
           <label htmlFor="question">Question:</label>
           <textarea
-            rows="2"
+            rows="4"
             cols="50"
             name="question"
             id="question"
@@ -155,7 +149,7 @@ function Dashboard() {
           />
         </fieldset>
         <button type="submit" disabled={loading}>
-          REGISTER
+          UPLOAD QUESTION
         </button>
       </form>
     </div>

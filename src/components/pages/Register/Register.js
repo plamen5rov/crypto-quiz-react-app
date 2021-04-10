@@ -6,6 +6,7 @@ import { useAuth } from "../../utils/AuthContext";
 function Register() {
   const emailRef = useRef();
   const passwordRef = useRef();
+
   const { signup, currentUser, createUserProfile } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -19,20 +20,17 @@ function Register() {
       setError("");
       setLoading(true);
       await signup(emailRef.current.value, passwordRef.current.value);
-
-      
+      try {
+        await createUserProfile(emailRef.current.value);
+      } catch {
+        setError("Failed to create user profile");
+        console.log(error);
+      }
     } catch {
       setError("Failed to create account");
       console.log(error);
     }
 
-    try {
-      createUserProfile(emailRef.current.value)
-    }
-    catch {
-      setError("Failed to create user profile");
-      console.log(error);
-    }
     setLoading(false);
     history.push("/login");
   }

@@ -1,16 +1,5 @@
-/* .dashboard-wrapper {
-  box-sizing: border-box;
-  margin: 50px auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
-
-
 .dashboardForm {
   display: flex;
-  min-width: 400px;
   max-height: 80%;
   flex-direction: column;
   border: rgb(248, 163, 4) 2px solid;
@@ -27,31 +16,28 @@
   color: #f3a611;
 }
 
-
 .dashboardForm fieldset {
   display: block;
-  margin: 10px auto;
+  margin: 5px auto;
   border: none;
-  width: 300px;
+  width: 100%;
 }
 
 .dashboardForm label {
   margin-right: 10px;
   font-size: larger;
-  
 }
 
 .dashboardForm input {
   margin-right: 10px;
   border: rgb(248, 163, 4) 2px solid;
   border-radius: 2px;
-  
 }
 
 .dashboardForm button {
   height: auto;
-  width: 260px;
-  padding: 10px 5px;
+  width: auto;
+  padding: 10px 35px;
   font-size: 30px;
   font-weight: bold;
   border-radius: 33px;
@@ -62,16 +48,16 @@
 }
 
 .dashboardForm button:hover {
-    cursor: pointer;
-    background: #f3a611;
-  }
+  cursor: pointer;
+  background: #f3a611;
+}
 
 .login {
-    text-align: center;
-    margin-top: 22px;
-    font-size: small;
+  text-align: center;
+  margin-top: 22px;
+  font-size: small;
 }
 
 .login a {
-    color:  #f3a611;
+  color: #f3a611;
 }

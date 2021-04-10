@@ -14,7 +14,7 @@ function Profile() {
     e.preventDefault();
     const username = usernameRef.current.value;
     const avatarURL = avatarURLRef.current.value;
-    updateUserProfile(currentUser.email, username, avatarURL);
+    await updateUserProfile(currentUser.email, username, avatarURL);
     history.push("/categories");
   }
 

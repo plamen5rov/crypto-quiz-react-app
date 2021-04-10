@@ -14,7 +14,7 @@ function Login() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    //if (emailRef.current.value!==user) {return  setError('Email already exists')}
+  
     try {
       setError("");
       setLoading(true);
@@ -25,19 +25,6 @@ function Login() {
     }
     setLoading(false);
 
-    // function checkAdmin() {
-    //   if (currentUser && (currentUser.email === "admin@quiz.com")) {
-    //     return true;
-    //   } else return false;
-    // }
-
-    // const admin = checkAdmin();
-    // console.log('Admin is: ',admin);
-    // console.log( 'Current user is: ', currentUser );
-
-    // if (admin) {
-    //   history.push("/admin");
-    // } else history.push("/profile");
     history.push("/profile")
   }
   return (
