@@ -11,10 +11,11 @@
 .dashboardForm {
   display: flex;
   min-width: 400px;
+  max-height: 80%;
   flex-direction: column;
   border: rgb(248, 163, 4) 2px solid;
   border-radius: 12px;
-  margin: 130px;
+  margin: 60px 200px;
   padding: 50px;
   align-items: center;
   justify-content: center;
