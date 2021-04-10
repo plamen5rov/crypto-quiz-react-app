@@ -1,7 +1,52 @@
-
-
 .profileWrapper {
-    flex-direction: column;
-    align-items: center;
-    justify-content:space-around;
+  display: flex;
+  min-width: 400px;
+  flex-direction: column;
+  border: rgb(248, 163, 4) 2px solid;
+  border-radius: 12px;
+  margin: 130px;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.profileWrapper h1 {
+  padding: 50px;
+  text-align: center;
+}
+.profileWrapper fieldset {
+  display: block;
+  margin: 10px auto;
+  border: none;
+  width: 300px;
+}
+
+.profileWrapper label {
+  margin-right: 10px;
+  font-size: larger;
+}
+
+.profileWrapper input {
+  margin-right: 10px;
+  border: rgb(248, 163, 4) 2px solid;
+  border-radius: 2px;
+}
+
+.profileWrapper button {
+  height: auto;
+  width: auto;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 33px;
+  background: linear-gradient(180deg, #f3a611 14.06%, #fff0ae 100%);
+  border: 2px solid #f3a611;
+  font-family: "Play";
+  margin-top: 15px;
+}
+
+.profileWrapper button:hover {
+  cursor: pointer;
+  background: #f3a611;
 }

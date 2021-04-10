@@ -4,15 +4,19 @@
   padding: 50px;
   align-items: center;
   justify-content: center;
+  margin: 0px 20px;
 }
 .categoryBox h2 {
-  padding-top: 9px;
+  padding-top: 0px;
   font-size: 1.7rem;
   text-align: center;
 }
 
 .categoryBox ul {
   list-style-type: none;
+  display: table;
+  width: 100%;
+  text-align: center;
 }
 
 .categoryBox li {
