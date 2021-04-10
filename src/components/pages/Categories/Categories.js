@@ -7,6 +7,7 @@ import { useAuth } from "../../utils/AuthContext";
 
 function Categories() {
   const [category, setCategory] = useState([]);
+  const [currentCollection, setCurrentCollection] = useState();
   const { currentUser } = useAuth();
 
   useEffect(() => {
@@ -23,9 +24,19 @@ function Categories() {
     };
   }, []);
 
+  useEffect(() => {
+    console.log("Current Collection: ", currentCollection);
+  },[currentCollection])
+
   function categoryClickHandler(e) {
     e.preventDefault();
-    console.log(e.target.innerText, " was clicked!");
+    const collection = e.target.innerHTML;
+    setCurrentCollection(collection);
+
+    // console.log(e.target.innerHTML, " was clicked!");
+    // console.log(collection, " collection");
+
+    // console.log("Current collection is: ", currentCollection);
   }
 
   const listItems = category.map((category) => (
@@ -42,9 +53,9 @@ function Categories() {
 
   return (
     <div className={styles.categoryBox}>
-      {currentUser && <h3>Click on a category to start the quiz!</h3>}
+      {currentUser && <h2>Click on a category to start the quiz!</h2>}
 
-      {!currentUser && <h3>REGISTER to start the quiz!</h3>}
+      {!currentUser && <h2>REGISTER to start the quiz!</h2>}
       <ul>{listItems}</ul>
     </div>
   );
