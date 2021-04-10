@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-//import { db } from "../../utils/firebaseConfig";
+import { db } from "../../utils/firebaseConfig";
 import { useHistory } from "react-router-dom";
 import "./Dashboard.css";
 
@@ -15,7 +15,7 @@ function Dashboard() {
   const answerDRef = useRef();
   const rightAnswerRef = useRef();
 
-  const [error, setError] = useState("");
+  //const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useHistory();
   async function handleDashboardSubmit(e) {
@@ -25,13 +25,37 @@ function Dashboard() {
     console.log(questionNumberRef.current.value);
     console.log(questionRef.current.value);
 
-    try {
-    } catch {
-      setError("Failed to submit to databasee");
-      console.log(error);
-    }
+    const collection = collectionRef.current.value;
+    const questionNumber = questionNumberRef.current.value;
+    const question = questionRef.current.value;
+    const answerA = answerARef.current.value;
+    const answerB = answerBRef.current.value;
+    const answerC = answerCRef.current.value;
+    const answerD = answerDRef.current.value;
+    const rightAnswer = rightAnswerRef.current.value;
+
+    const data = {
+      text: question,
+      A: answerA,
+      B: answerB,
+      C: answerC,
+      D: answerD,
+      rightAnswer: rightAnswer,
+    };
+
+    db.collection(collection)
+      .doc(questionNumber)
+      .set(data)
+      .then(() => {
+        console.log("Document successfully written!");
+        history.push("/admin");
+      })
+      .catch((error) => {
+        console.error("Error writing document: ", error);
+      });
+
     setLoading(false);
-    history.push("/login");
+    history.push("/categories");
   }
   return (
     <div className="dashboardForm">
