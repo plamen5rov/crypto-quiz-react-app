@@ -14,12 +14,14 @@ import PrivateRoute from "./components/utils/PrivateRoute";
 import Dashboard from "components/pages/Dashboard/Dashboard";
 import AdminRoute from "./components/utils/AdminRoute";
 
+
 function App() {
   return (
     
 <AuthProvider>
       <div className="App">
         <Header />
+        
 
         <Switch>
           <Route path="/" exact component={Home} />
