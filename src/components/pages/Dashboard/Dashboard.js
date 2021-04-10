@@ -150,7 +150,7 @@ function Dashboard() {
             name="rightAnswer"
             id="rightAnswer"
             required
-            placeholder="A1, B1, C1 or D!"
+            placeholder="A1, B1, C1 or D1!"
             ref={rightAnswerRef}
           />
         </fieldset>

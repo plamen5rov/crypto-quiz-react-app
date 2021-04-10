@@ -1,19 +1,16 @@
-.dashboard-wrapper {
+/* .dashboard-wrapper {
   box-sizing: border-box;
   margin: 50px auto;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
-.dashboard-wrapper h1 {
-  text-align: center;
-  margin: 50px auto;
-}
+
 
 .dashboardForm {
   display: flex;
-  max-width: 400px;
+  min-width: 400px;
   flex-direction: column;
   border: rgb(248, 163, 4) 2px solid;
   border-radius: 12px;
@@ -22,6 +19,11 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+.dashboardForm h1 {
+  text-align: center;
+  margin: 0px auto;
+  color: #f3a611;
 }
 
 
