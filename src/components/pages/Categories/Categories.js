@@ -28,6 +28,7 @@ function Categories() {
 
   return (
     <div className={styles.categoryBox}>
+    <h2>Click on a category to start quiz!</h2>
       <ul>{listItems}</ul>
     </div>
   );

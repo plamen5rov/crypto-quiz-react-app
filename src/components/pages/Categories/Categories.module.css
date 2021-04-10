@@ -1,9 +1,16 @@
 .categoryBox {
   display: flex;
+  flex-direction: column;
   padding: 50px;
   align-items: center;
   justify-content: center;
 }
+.categoryBox h2 {
+  padding-top: 9px;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
 .categoryBox ul {
   list-style-type: none;
 }
@@ -19,9 +26,14 @@
   padding: 15px 25px;
   font-family: "Play";
   font-size: 1.5rem;
-  font-weight:lighter;
+  font-weight: lighter;
   text-transform: uppercase;
   border-radius: 33px;
-  background: #f3a611;
+  color: #f3a611;
+  background-color: black;
   border: 2px solid #f3a611;
+}
+.categoryBtn:hover {
+  color: black;
+  background-color: #f3a611;
 }
