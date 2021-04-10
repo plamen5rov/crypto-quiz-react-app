@@ -40,4 +40,9 @@
 .categoryBtn:hover {
   color: black;
   background-color: #f3a611;
+  cursor: pointer;
+}
+
+.categoryBtn:focus {
+  outline: none;
 }
