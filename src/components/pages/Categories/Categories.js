@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import firebase from "firebase/app";
 import styles from "./Categories.module.css";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useAuth } from "../../utils/AuthContext";
 //import { motion } from "framer-motion";
 
@@ -9,6 +9,7 @@ function Categories() {
   const [category, setCategory] = useState([]);
   const [currentCollection, setCurrentCollection] = useState();
   const { currentUser } = useAuth();
+  const history = useHistory();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,11 +25,24 @@ function Categories() {
     };
   }, []);
 
-  useEffect(() => {
-    console.log("Current Collection: ", currentCollection);
-  },[currentCollection])
+  // useEffect(() => {
+  //   console.log("Current Collection: ", currentCollection);
 
-  function categoryClickHandler(e) {
+  //   const fetchCollectionData = async () => {
+  //     const db = firebase.firestore();
+  //     const data = await db.collection(currentCollection).get();
+  //     console.log(data);
+  //     //setCategory(data.docs.map((doc) => doc.data()));
+  //   };
+
+  //   fetchCollectionData();
+
+  //   return () => {
+  //     //setCategory([]);
+  //   };
+  // }, [currentCollection]);
+
+  async function categoryClickHandler(e) {
     e.preventDefault();
     const collection = e.target.innerHTML;
     setCurrentCollection(collection);
@@ -36,7 +50,8 @@ function Categories() {
     // console.log(e.target.innerHTML, " was clicked!");
     // console.log(collection, " collection");
 
-    // console.log("Current collection is: ", currentCollection);
+    console.log("Current collection is: ", currentCollection);
+    history.push("/quiz")
   }
 
   const listItems = category.map((category) => (

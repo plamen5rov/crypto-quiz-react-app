@@ -13,6 +13,7 @@ import { AuthProvider } from "components/utils/AuthContext";
 import PrivateRoute from "./components/utils/PrivateRoute";
 import Dashboard from "components/pages/Dashboard/Dashboard";
 import AdminRoute from "./components/utils/AdminRoute";
+import QuizMain from './components/quiz/QuizMain/QuizMain';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
           <PrivateRoute path="/profile" component={Profile} />
+          <PrivateRoute path="/quiz" component={QuizMain} />
           <AdminRoute path="/admin" component={Dashboard} />
           <Route
             render={() => <h1 style={{ padding: 50 }}>Page not found!</h1>}
