@@ -5,7 +5,22 @@
 
 # The project is hosted on Firebase and is available here:
 
-[Firebase hosting](https://crypto-quiz-react-app.web.app/)
+[https://crypto-quiz-react-app.web.app/](https://crypto-quiz-react-app.web.app/)
+
+# Brief description
+
+The app is a Crypto Quiz for registered users to answer and test their knowledge. Questions are divided in 10 categories with 10 questions each.
+
+# Application Structure
+
+## Static pages:
+ - Home page
+ - About page
+ - Register page
+ - Login page
+
+
+
 
 # Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
