@@ -14,6 +14,7 @@ import PrivateRoute from "./components/utils/PrivateRoute";
 import Dashboard from "components/pages/Dashboard/Dashboard";
 import AdminRoute from "./components/utils/AdminRoute";
 import QuizMain from './components/quiz/QuizMain/QuizMain';
+import FinalPage from "components/quiz/FinalPage/FinalPage";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path="/login" component={Login} />
           <PrivateRoute path="/profile" component={Profile} />
           <PrivateRoute path="/quiz" component={QuizMain} />
+          <PrivateRoute path="/final" component={FinalPage} />
           <AdminRoute path="/admin" component={Dashboard} />
           <Route
             render={() => <h1 style={{ padding: 50 }}>Page not found!</h1>}
