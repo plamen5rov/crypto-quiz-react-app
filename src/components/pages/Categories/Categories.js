@@ -25,22 +25,7 @@ function Categories() {
     };
   }, []);
 
-  // useEffect(() => {
-  //   console.log("Current Collection: ", currentCollection);
-
-  //   const fetchCollectionData = async () => {
-  //     const db = firebase.firestore();
-  //     const data = await db.collection(currentCollection).get();
-  //     console.log(data);
-  //     //setCategory(data.docs.map((doc) => doc.data()));
-  //   };
-
-  //   fetchCollectionData();
-
-  //   return () => {
-  //     //setCategory([]);
-  //   };
-  // }, [currentCollection]);
+  
 
   async function categoryClickHandler(e) {
     e.preventDefault();
