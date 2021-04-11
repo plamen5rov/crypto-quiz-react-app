@@ -1,3 +1,39 @@
 .about-page {
-    padding: 50px;
+    padding-top: 20px;
+    margin-top: 80px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    font-size: 1.5rem;
+}
+
+.about-page p {
+    padding-top: 0px;
+    margin-top: 5px;
+    
+}
+
+
+  .about-image {
+      margin: 5px;
+      padding: 5px;
+  }
+
+  .about {
+    margin: 5px;
+    padding: 5px;
+}
+
+.about-page a {
+    color:lightblue;
+
+}
+
+.about-page a:visited {
+    color:lightblue;
+    
 }
