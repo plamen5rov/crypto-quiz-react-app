@@ -13,14 +13,42 @@ The app is a Crypto Quiz for registered users to answer and test their knowledge
 
 # Application Structure
 
+## Dynamic pages:
+ - Categories page
+ - Hall Of Fame page
+ - Admin page
+ - Profile page
+ - Quiz page
+ 
 ## Static pages:
  - Home page
  - About page
  - Register page
  - Login page
 
+## Public part:
+ - Home page
+ - About page
+ - Register page
+ - Login page
+ - Categories page (with limited functionality)
+ - Hall Of Fame page
 
+## Private part (User Area):
+ - Categories page (gives access to the Quiz)
+ - Admin page (for for the admin user ONLY!)
+ - Profile page
+ - Quiz page
 
+## Class components
+ - Home 
+ - About
+ - Footer
+ - QuizMain
+
+## Functional components
+All the rest.
+ 
 
 # Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
