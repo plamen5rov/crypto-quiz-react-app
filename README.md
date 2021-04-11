@@ -48,6 +48,8 @@ The app is a Crypto Quiz for registered users to answer and test their knowledge
 
 ## Functional components
 All the rest.
+
+![enter image description here](https://pasteboard.co/JWOxGvV.png)
  
 
 # Getting Started with Create React App
