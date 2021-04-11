@@ -1,8 +1,30 @@
 .hallOfFame {
-    color: green;
-    padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  
+  color: lawngreen;
+  padding-top: 50px;
+  padding-left: 160px;
+}
+
+.hallOfFame li {
+  padding-top: 9px;
+  font-size: 1.7rem;
+  text-align: left;
 }
 
 .hallOffFameBtn {
-    
+  height: auto;
+  width: 100%;
+  padding: 5px 25px;
+  font-family: "Play";
+  font-size: 1.5rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  background-color: black;
+  color: lawngreen;
+  border: none;
+  text-align: left;
+  margin-left: 3px;
 }

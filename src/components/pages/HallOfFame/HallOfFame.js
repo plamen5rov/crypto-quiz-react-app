@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import firebase from "firebase/app";
 import "./HallOfFame.css";
-//import { useAuth } from "../../utils/AuthContext";
+
 
 export default function HallOfFame() {
-  //const { currentUser } = useAuth();
+  
   const [winner, setWinner] = useState([]);
 
   useEffect(() => {
@@ -23,18 +23,17 @@ export default function HallOfFame() {
     };
   }, []);
 
-  console.log("Winners are: ", winner);
 
   const listUsers = winner.map((user) => (
     <li key={user.username}>
-      <button className="hallOffFameBtn">`User {user.username} with score of: {user.score}</button>
+      <button className="hallOffFameBtn">{user.username} with score {user.score} out of 10</button>
     </li>
   ));
 
   return (
     <div className="hallOfFame">
       <h1>Hall of Fame Page</h1>
-      <ul>{listUsers}</ul>
+      <ol>{listUsers}</ol>
     </div>
   );
 }
