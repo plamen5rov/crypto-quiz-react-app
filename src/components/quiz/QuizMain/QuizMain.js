@@ -2,9 +2,12 @@ import React, {Component} from 'react';
 import Question from '../Question/Question';
 import Answer from '../Answer/Answer';
 import './QuizMain.css';
+import FinalPage from '../FinalPage/FinalPage';
+
 
 export default class Quiz extends Component {
 
+    
     // initiating the local state
     state = {
         quiestions: {
@@ -125,6 +128,8 @@ export default class Quiz extends Component {
         });
     }
 
+    
+
     render(){
         let { quiestions, answers, correctAnswer, clickedAnswer, step, score } = this.state;
         return(
@@ -148,12 +153,12 @@ export default class Quiz extends Component {
                             ? false : true
                         }
                         onClick={() => this.nextStep(step)}>Next Question</button>
-                    </>) : (
-                        <div className="finalPage">
+                    </>) : ( <FinalPage score={score} />
+                        /* <div className="finalPage">
                             <h1>You have completed the quiz!</h1>
                             <p>Your score is: {score} of {Object.keys(quiestions).length}</p>
                             <p>Thank you!</p>
-                        </div>
+                        </div> */
                     )
                 }
             </div>

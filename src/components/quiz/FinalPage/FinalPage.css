@@ -1,10 +1,13 @@
-.Content h1{
+.finalPage{
+    text-align: center;
+}
+.finalPage h1{
+    text-align: center;
     margin: 15px 0;
     font-size: 25px;
     font-family: Arial,sans-serif;
-    font-weight: normal;
-    color: #f3a611;
+    font-weight: bold;
+    color: #008416;
     text-transform: none;
     text-shadow: none;
-    text-align: left;
 }

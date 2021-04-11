@@ -16,12 +16,12 @@ export function AuthProvider({ children }) {
 
   function login(email, password) {
     return auth.signInWithEmailAndPassword(email, password);
-    
   }
 
   async function createUserProfile(email) {
     try {
-      await db.collection('users')
+      await db
+        .collection("users")
         .doc(email)
         .set({ username: email, score: 0 });
       console.log("User successfully created!");
@@ -31,28 +31,38 @@ export function AuthProvider({ children }) {
   }
 
   async function updateUserProfile(email, username, avatarUrl) {
-
     const data = {
       username,
-      avatarUrl
+      avatarUrl,
     };
     try {
-      await db.collection('users')
-        .doc(email)
-        .set(data);
+      await db.collection("users").doc(email).set(data);
       console.log("User successfully updated!");
     } catch (error) {
       console.error("Error creating user: ", error);
     }
   }
 
-   /* function logout() {
+  async function updateUserScore(email, score) {
+    
+    const userRef = db.collection('users').doc(email);
+    try {
+      // await db.collection("users").doc(email).set(data);
+      await userRef.set({
+        score: score
+      }, { merge: true });
+      console.log("User score successfully updated!");
+    } catch (error) {
+      console.error("Error updating user's score user: ", error);
+    }
+  }
+
+  /* function logout() {
     return auth.signOut();
   } */
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
-      
       setCurrentUser(user);
       setLoading(false);
     });
@@ -64,7 +74,8 @@ export function AuthProvider({ children }) {
     signup,
     login,
     createUserProfile,
-    updateUserProfile
+    updateUserProfile,
+    updateUserScore
     /* logout */
   };
 
